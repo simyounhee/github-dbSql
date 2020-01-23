@@ -27,7 +27,7 @@ FROM users;
 
 --테이블에 어떤 컬럼이 있는지 확인하는 방법 
 
-SELECT id
+SELECT userid
 FROM users;
 
 
@@ -59,7 +59,7 @@ FROM users;
 --연습문제(2)
 --prod 테이블에서 prod_id, prod_name 두 컬럼을 조회하는 쿼리를 작성하시오 
 ---                                      (단 prod_id ->id, 으로 컬럼 별칭을 지정)
-SELECT prod_id, prod_name
+SELECT prod_id id, prod_name nm
 FROM prod;
 
 --lprod 테이블에서 lprod_gu, lprod_nm 두 컬럼을 조회하는 퀴리를 작성하시오

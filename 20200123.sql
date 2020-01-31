@@ -1,6 +1,11 @@
 --문제
+<<<<<<< Updated upstream
 ---emp 테이블에서 입사 일자가 1982년 1월 1일 이후부터 1983년 1월 1일 이전인 사원의 ename, hiredate 데이터를 조회하는 쿼리를 작성하시오.
 --     (단, 연산자는 비교연산자를 사용한다.)
+=======
+---emp 테이블에서 입사 일자가 1982년 1월 1일 이후부터 1983년 1월 1일 이전인 사원의 ename, hiredate 데이터를 조회하는 쿼리를 
+-- 작성하시오.(단, 연산자는 비교연산자를 사용한다.)
+>>>>>>> Stashed changes
 -----*where절에 기술하는 조건에 순서는 조회 결과에 영향을 미치지 않는다.
 ----그 이유는 SQL은 집합의 개념을 갖고 있기 때문이다. 집합은 명확해야함 
 --집합 : 키가 185cm이상이고 몸무게가 70kg이상인 사람들의 모임
@@ -42,7 +47,11 @@ WHERE ename = 'SMITH' OR ename = 'JONES';
 
 
 -- AND / OR 헷갈리지 말기 !  IN= OR (그러나 쓰는 방식은 다르다)
+<<<<<<< Updated upstream
 --문자 상수 
+=======
+
+>>>>>>> Stashed changes
 
 
 -실습
@@ -120,6 +129,7 @@ WHERE mem_name
 --nuall 비교 연산 (IS)
 -- come 컬럼의 값이 null인 데이터를 조회 (WHERE comm = null)
 SELECT *
+<<<<<<< Updated upstream
 FROM emp;
 WHERE comm = null;
 
@@ -134,11 +144,31 @@ WHERE comm IS null;
 SELECT *
 FROM emp;
 WHERE comm IS NOT null;
+=======
+FROM emp
+WHERE comm = null;      ---X
+
+SELECT *
+FROM emp
+WHERE comm = '';
+
+SELECT *
+FROM emp
+WHERE comm IS null;    ---null
+
+SELECT *
+FROM emp
+WHERE comm IS NOT null; ---null(X)
+>>>>>>> Stashed changes
 
 
 SELECT *
 FROM emp
+<<<<<<< Updated upstream
 WHERE comm >= 0
+=======
+WHERE comm >= 0;
+>>>>>>> Stashed changes
 
 
 --실습 where6
@@ -155,11 +185,19 @@ WHERE comm >= 0
 --사원의 관리자가 7698, 7839 그리고 null이 아닌 직원만 조회 
 --NOT IN 연산자에서는 NULL 값을 포함 시키면 안된다 *******핵심!!
 SELECT *
+<<<<<<< Updated upstream
 FROM emp;
 WHERE mgr not in( 7698, 7839, null);
 --제대로 쓰게 되면 -->
 SELECT *
 FROM emp;
+=======
+FROM emp
+WHERE mgr not in( 7698, 7839, null);
+--제대로 쓰게 되면 -->
+SELECT *
+FROM emp
+>>>>>>> Stashed changes
 WHERE mgr not in( 7698, 7839)
 AND mgr IS NOT NULL;
 
@@ -223,7 +261,11 @@ OR empno LIKE '78%';
 SELECT *
 FROM emp
 WHERE ename = 'SMITH'
+<<<<<<< Updated upstream
 OR (ename = 'ALLEN' AND JOB = 'SALLESMAN');      
+=======
+OR (ename = 'ALLEN' AND JOB = 'SALESMAN');      
+>>>>>>> Stashed changes
 
 
 --사원 이름이 SMITH 이거나 ALLEN 이면서 
